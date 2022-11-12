@@ -29,7 +29,7 @@ public class Asset {
 	private String secondryContaxt;
 	@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	@JoinColumn(name="roomId")
-	private Room rooms;
+	private Room room;
 
 	public Asset() {
 		super();

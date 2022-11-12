@@ -27,7 +27,8 @@ public class User {
 	private String department;
 	private Boolean isActive;
 	@ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-	@JoinTable(name="user_role",joinColumns= {@JoinColumn(name="userId")},inverseJoinColumns = {@JoinColumn(name="roleId")})
+	@JoinTable(name="user_role",joinColumns= {@JoinColumn(name="userId")},
+	inverseJoinColumns = {@JoinColumn(name="roleId")})
 	private List<Role> roles;
 
 	public User() {
